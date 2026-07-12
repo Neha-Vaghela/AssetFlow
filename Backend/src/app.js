@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
+
+const dashboardRoutes = require("./routes/dashboardRoutes");
 const userRoutes = require("./routes/userRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const departmentRoutes = require("./routes/departmentRoutes");
@@ -17,5 +19,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use("/api/employees", employeeRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 module.exports = app;
