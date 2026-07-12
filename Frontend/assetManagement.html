@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management</title>
+    <link rel="stylesheet" href="css/assetManagement.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>Asset Management</h1>
+                <p>Manage company assets with add, edit, delete, and view actions.</p>
+            </div>
+            <a href="AssetManager.html" class="nav-btn">Back to Dashboard</a>
+        </div>
+
+        <div class="grid-two-col">
+            <section class="panel form-box">
+                <div class="form-header">
+                    <div>
+                        <h2>Asset Details</h2>
+                        <p>Fill in the asset information below.</p>
+                    </div>
+                </div>
+                <form id="assetForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="assetName">Asset Name</label>
+                            <input type="text" id="assetName" placeholder="Enter asset name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assetCategory">Category</label>
+                            <select id="assetCategory" required>
+                                <option value="">Select category</option>
+                                <option value="Laptop">Electronic</option>
+                                <option value="Monitor">Monitor</option>
+                                <option value="Printer">Printer</option>
+                                <option value="Projector">Projector</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="assetSerial">Serial Number</label>
+                            <input type="text" id="assetSerial" placeholder="Enter serial number" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="purchaseDate">Purchase Date</label>
+                            <input type="date" id="purchaseDate" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assetLocation">Location</label>
+                            <input type="text" id="assetLocation" placeholder="Enter location" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assetCondition">Condition</label>
+                            <select id="assetCondition" required>
+                                <option value="">Select condition</option>
+                                <option value="New">excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Needs Repair"> Fair</option>
+                                <option value="Retired">Damaged</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Shared Resource</label>
+                            <div class="status-options">
+                                <label><input type="radio" name="sharedResource" value="Yes" checked> Yes</label>
+                                <label><input type="radio" name="sharedResource" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="photoUrl">Photo URL</label>
+                            <input type="url" id="photoUrl" placeholder="https://example.com/photo.jpg">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="add-btn" id="addAssetBtn">Add Asset</button>
+                        <button type="button" class="secondary-btn" id="editAssetBtn" hidden>Edit Asset</button>
+                        <button type="button" class="cancel-btn" id="deleteAssetBtn" hidden>Delete Asset</button>
+                        <button type="button" class="nav-btn" id="viewAssetBtn">View Asset</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel preview-box" id="assetPreviewPanel">
+                <div class="form-header">
+                    <div>
+                        <h2>Selected Asset</h2>
+                        <p>Review asset details after selecting or viewing an item.</p>
+                    </div>
+                </div>
+                <div class="preview-card" id="assetPreview" hidden>
+                    <img id="previewImage" src="" alt="Asset photo" hidden>
+                    <div class="preview-info">
+                        <div><span>Name:</span> <strong id="previewName"></strong></div>
+                        <div><span>Category:</span> <strong id="previewCategory"></strong></div>
+                        <div><span>Serial:</span> <strong id="previewSerial"></strong></div>
+                        <div><span>Purchase Date:</span> <strong id="previewDate"></strong></div>
+                        <div><span>Location:</span> <strong id="previewLocation"></strong></div>
+                        <div><span>Condition:</span> <strong id="previewCondition"></strong></div>
+                        <div><span>Shared:</span> <strong id="previewShared"></strong></div>
+                        <div><span>Photo URL:</span> <a id="previewUrl" href="#" target="_blank"></a></div>
+                    </div>
+                </div>
+                <div class="preview-empty" id="previewEmpty">No asset selected. Click View on an asset row to preview details.</div>
+            </section>
+        </div>
+
+        <section class="panel table-panel">
+            <div class="table-header">
+                <h2>Asset List</h2>
+                <p>Use row actions to view, edit, or delete assets.</p>
+            </div>
+            <div class="table-container">
+                <table id="assetTable">
+                    <thead>
+                        <tr>
+                            <th>Asset Name</th>
+                            <th>Category</th>
+                            <th>Serial</th>
+                            <th>Location</th>
+                            <th>Condition</th>
+                            <th>Shared</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/assetManagement.js"></script>
+</body>
+</html>

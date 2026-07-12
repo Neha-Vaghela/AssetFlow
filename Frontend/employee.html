@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="css/employee.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="menu-toggle">☰</button>
+            <h2 class="brand">AssetFlow</h2>
+        </div>
+
+        <div class="topbar-center">
+            <input type="search" placeholder="Search assets, bookings, requests...">
+        </div>
+
+        <div class="topbar-right">
+            <button class="icon-btn">🔔</button>
+            <button class="profile-btn">👤 Employee</button>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <nav>
+                <a href="#dashboard" class="active">🏠 Dashboard</a>
+                <a href="#my-assets">My Assets</a>
+                <a href="#booking">Book Shared Resource</a>
+                <a href="#maintenance">Maintenance</a>
+                <a href="#notifications">Notifications</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="panel welcome-panel">
+                <div class="welcome-left">
+                    <p class="eyebrow">Employee Dashboard</p>
+                    <h1>Welcome Back, Rahul 👋</h1>
+                    <p>Track your assets, bookings, maintenance requests, and notifications in one place.</p>
+                </div>
+
+                <div class="welcome-right">
+                    <span class="status-chip">Role: Employee</span>
+                </div>
+            </section>
+
+            <section class="summary-grid">
+                <div class="summary-card">
+                    <div class="card-icon">🧾</div>
+                    <h3>8</h3>
+                    <p>My Assets</p>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">📅</div>
+                    <h3>3</h3>
+                    <p>Upcoming Bookings</p>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">🛠</div>
+                    <h3>2</h3>
+                    <p>Maintenance Requests</p>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">🔔</div>
+                    <h3>5</h3>
+                    <p>Notifications</p>
+                </div>
+            </section>
+
+            <section id="my-assets" class="panel section-panel">
+                <div class="section-title">
+                    <h2>My Assets</h2>
+                    <p>Quick access to asset details and requests.</p>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-card">
+                        <h3>View Asset Details</h3>
+                        <p>Check your assigned asset information and status.</p>
+                        <button>Open →</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Raise Maintenance Request</h3>
+                        <p>Report issues and request repairs for your assets.</p>
+                        <button>Raise →</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Request Transfer</h3>
+                        <p>Request a transfer for a different device or equipment.</p>
+                        <button>Request →</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Request Return</h3>
+                        <p>Submit a return request for assets you no longer need.</p>
+                        <button>Return →</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="booking" class="panel section-panel">
+                <div class="section-title">
+                    <h2>Book Shared Resource</h2>
+                    <p>Reserve rooms and equipment with ease.</p>
+                </div>
+                <ul class="action-list">
+                    <li>View Availability</li>
+                    <li>Book</li>
+                    <li>Cancel Booking</li>
+                    <li>View Booking History</li>
+                </ul>
+            </section>
+
+            <section id="maintenance" class="panel section-panel">
+                <div class="section-title">
+                    <h2>Maintenance</h2>
+                    <p>Keep your equipment working smoothly.</p>
+                </div>
+                <ul class="action-list">
+                    <li>Raise Request</li>
+                    <li>View Request Status</li>
+                    <li>View Maintenance History</li>
+                </ul>
+            </section>
+
+            <section id="notifications" class="panel section-panel">
+                <div class="section-title">
+                    <h2>Notifications</h2>
+                    <p>Stay updated on asset and booking activity.</p>
+                </div>
+                <ul class="action-list">
+                    <li>Asset Assigned</li>
+                    <li>Booking Updates</li>
+                    <li>Maintenance Updates</li>
+                    <li>Return Reminder</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>

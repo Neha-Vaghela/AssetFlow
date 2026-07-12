@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Allocation</title>
+    <link rel="stylesheet" href="css/allocateAsset.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>Asset Allocation</h1>
+                <p>Assign assets to employees, return assets, or transfer them between users.</p>
+            </div>
+            <a href="AssetManager.html" class="nav-btn">Back to Dashboard</a>
+        </div>
+
+        <div class="grid-two-col">
+            <section class="panel form-box">
+                <div class="form-header">
+                    <div>
+                        <h2>Allocate Asset</h2>
+                        <p>Fill in assignment details below.</p>
+                    </div>
+                </div>
+                <form id="allocationForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="selectAsset">Select Asset</label>
+                            <select id="selectAsset" required>
+                                <option value="">Choose asset</option>
+                                <option value="AF-0001">AF-0001</option>
+                                <option value="AF-0002">AF-0002</option>
+                                <option value="AF-0003">AF-0003</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="selectEmployee">Select Employee</label>
+                            <select id="selectEmployee" required>
+                                <option value="">Choose employee</option>
+                                <option value="Shivani">Shivani</option>
+                                <option value="Rahul">Rahul</option>
+                                <option value="Ankit">Ankit</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="expectedReturnDate">Expected Return Date</label>
+                            <input type="date" id="expectedReturnDate" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="allocationNotes">Notes</label>
+                            <textarea id="allocationNotes" rows="4" placeholder="Enter notes"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="add-btn" id="allocateBtn">Allocate</button>
+                        <button type="button" class="secondary-btn" id="returnAssetBtn">Return Asset</button>
+                        <button type="button" class="nav-btn" id="transferAssetBtn">Transfer Asset</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel table-panel">
+                <div class="form-header">
+                    <div>
+                        <h2>Allocation Status</h2>
+                        <p>View current assigned assets and employee status.</p>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="allocationTable">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Employee</th>
+                                <th>Expected Return</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/allocateAsset.js"></script>
+</body>
+</html>
