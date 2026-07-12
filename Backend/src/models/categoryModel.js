@@ -1,0 +1,29 @@
+const mongoose = require("mongoose");
+
+const categorySchema = new mongoose.Schema(
+    {
+        categoryName: {
+            type: String,
+            required: true,
+            unique: true,
+            trim: true,
+        },
+
+        optionalField: {
+            type: String,
+            trim: true,
+            default: "",
+        },
+
+        status: {
+            type: String,
+            enum: ["Active", "Inactive"],
+            default: "Active",
+        },
+    },
+    {
+        timestamps: true,
+    }
+);
+const Category = mongoose.model("Category", categorySchema);
+module.exports = Category
