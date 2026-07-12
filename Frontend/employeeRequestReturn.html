@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Return Request</title>
+
+    <link rel="stylesheet" href="css/employee.css">
+    <link rel="stylesheet" href="css/employeeAssetDetails.css">
+</head>
+<body>
+
+<div class="page-shell">
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+            <button class="menu-toggle">☰</button>
+            <h2 class="brand">AssetFlow</h2>
+        </div>
+
+        <div class="topbar-center">
+            <input type="search" placeholder="Search assets, requests...">
+        </div>
+
+        <div class="topbar-right">
+            <button class="icon-btn">🔔</button>
+            <button class="profile-btn">👤 Employee</button>
+        </div>
+
+    </header>
+
+    <div class="layout-grid">
+
+        <aside class="sidebar">
+
+            <nav>
+
+                <a href="employee.html">🏠 Dashboard</a>
+
+                <a href="employeeAssetDetails.html">📋 Asset Details</a>
+
+                <a href="employeeMaintenance.html">🛠 Maintenance</a>
+
+                <a href="employeeTransfer.html">🔁 Transfer</a>
+
+                <a href="employeeReturn.html" class="active">↩️ Return</a>
+
+                <a href="#">Logout</a>
+
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <!-- Return Form -->
+
+            <section class="panel section-panel">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <p class="eyebrow">Return Request</p>
+
+                        <h2>Return an Asset</h2>
+
+                        <p>
+                            Submit a request to return an assigned asset.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <form id="returnRequestForm" class="form-panel">
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label for="asset">
+
+                                Asset
+
+                            </label>
+
+                            <select id="asset" required>
+
+                                <option value="">
+                                    Select Asset
+                                </option>
+
+                                <option value="AF-0001">
+                                    AF-0001 - Dell Laptop
+                                </option>
+
+                                <option value="AF-0002">
+                                    AF-0002 - HP Monitor
+                                </option>
+
+                                <option value="AF-0003">
+                                    AF-0003 - Logitech Keyboard
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label for="returnDate">
+
+                                Return Date
+
+                            </label>
+
+                            <input
+                                type="date"
+                                id="returnDate"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="input-group full-width">
+
+                            <label for="reason">
+
+                                Return Reason
+
+                            </label>
+
+                            <textarea
+                                id="reason"
+                                rows="4"
+                                placeholder="Enter return reason..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="add-btn"
+                        >
+
+                            Submit Request
+
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="secondary-btn"
+                        >
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- Return Requests Table -->
+
+            <section class="panel section-panel">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <p class="eyebrow">
+
+                            Return Request List
+
+                        </p>
+
+                        <h2>
+
+                            Submitted Return Requests
+
+                        </h2>
+
+                        <p>
+
+                            View the status of your return requests.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="table-container asset-table-container">
+
+                    <table class="asset-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Asset</th>
+
+                                <th>Return Date</th>
+
+                                <th>Reason</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="returnRequestBody">
+
+                            <!-- JavaScript will insert rows -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script src="js/employeeReturn.js"></script>
+
+</body>
+</html>
