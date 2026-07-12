@@ -176,7 +176,31 @@ const login = async (req, res) => {
     }
 };
 
+
+// Get All Users
+ async function getAllUsers (req, res)  {
+    try {
+
+        const users = await User.find().select("_id name email role");
+
+        res.status(200).json({
+            success: true,
+            total: users.length,
+            users
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+};
+
 module.exports = {
     register,
-    login
+    login,
+    getAllUsers
 };
