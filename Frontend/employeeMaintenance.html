@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Maintenance Request</title>
+    <link rel="stylesheet" href="css/employee.css">
+    <link rel="stylesheet" href="css/employeeAssetDetails.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="menu-toggle">☰</button>
+            <h2 class="brand">AssetFlow</h2>
+        </div>
+        <div class="topbar-center">
+            <input type="search" placeholder="Search assets, requests...">
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn">🔔</button>
+            <button class="profile-btn">👤 Employee</button>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <nav>
+                <a href="employee.html">🏠 Dashboard</a>
+                <a href="employeeAssetDetails.html">📋 Asset Details</a>
+                <a href="employeeMaintenance.html" class="active">🛠 Maintenance</a>
+                <a href="#">🔁 Transfer</a>
+                <a href="#">↩️ Return</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="panel section-panel">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">Raise Maintenance Request</p>
+                        <h2>Report an Issue</h2>
+                        <p>Submit a maintenance request for any asset you are using.</p>
+                    </div>
+                </div>
+                <form id="employeeMaintenanceForm" class="form-panel">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="employeeAsset">Asset</label>
+                            <select id="employeeAsset" required>
+                                <option value="">Select asset</option>
+                                <option value="AF-0003">AF-0003</option>
+                                <option value="AF-0005">AF-0005</option>
+                                <option value="DL-6234">DL-6234</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="employeePriority">Priority</label>
+                            <select id="employeePriority" required>
+                                <option value="">Select priority</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="employeeIssue">Issue Description</label>
+                            <textarea id="employeeIssue" rows="4" placeholder="Describe the issue" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="employeePhoto">Photo</label>
+                            <input type="file" id="employeePhoto" accept="image/*">
+                        </div>
+                        <div class="input-group preview-group">
+                            <label>Photo Preview</label>
+                            <div id="employeePhotoPreview" class="photo-preview">No photo</div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="add-btn">Submit Request</button>
+                        <button type="reset" class="secondary-btn">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel section-panel">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">Request Status</p>
+                        <h2>Submitted Maintenance Requests</h2>
+                        <p>Track the maintenance requests you have raised.</p>
+                    </div>
+                </div>
+                <div class="table-container asset-table-container">
+                    <table class="asset-table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Issue</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeMaintenanceBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="js/employeeMaintenance.js"></script>
+</body>
+</html>

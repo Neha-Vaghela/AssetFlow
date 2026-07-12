@@ -232,7 +232,8 @@ body {
     line-height: 1.6;
 }
 
-.feature-card button {
+.feature-card button,
+.feature-card .feature-button {
     align-self: start;
     width: fit-content;
     border: none;
@@ -242,10 +243,12 @@ body {
     border-radius: 16px;
     cursor: pointer;
     font-weight: 700;
+    text-decoration: none;
     transition: transform 0.15s ease, background 0.2s ease;
 }
 
-.feature-card button:hover {
+.feature-card button:hover,
+.feature-card .feature-button:hover {
     background: #6D28D9;
     transform: translateY(-1px);
 }

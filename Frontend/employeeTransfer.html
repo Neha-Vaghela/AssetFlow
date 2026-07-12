@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Transfer Request</title>
+    <link rel="stylesheet" href="css/employee.css">
+    <link rel="stylesheet" href="css/employeeAssetDetails.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="menu-toggle">☰</button>
+            <h2 class="brand">AssetFlow</h2>
+        </div>
+        <div class="topbar-center">
+            <input type="search" placeholder="Search assets, requests...">
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn">🔔</button>
+            <button class="profile-btn">👤 Employee</button>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <nav>
+                <a href="employee.html">🏠 Dashboard</a>
+                <a href="employeeAssetDetails.html">📋 Asset Details</a>
+                <a href="employeeMaintenance.html">🛠 Maintenance</a>
+                <a href="employeeTransfer.html" class="active">🔁 Transfer</a>
+                <a href="#">↩️ Return</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="panel section-panel">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">Request Transfer</p>
+                        <h2>Transfer an Asset</h2>
+                        <p>Submit a transfer request for your assigned asset.</p>
+                    </div>
+                </div>
+                <form id="transferRequestForm" class="form-panel">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="transferAsset">Asset</label>
+                            <select id="transferAsset" required>
+                                <option value="">Select asset</option>
+                                <option value="AF-0002">AF-0002</option>
+                                <option value="AF-0004">AF-0004</option>
+                                <option value="AF-0003">AF-0003</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="transferDepartment">Transfer Department</label>
+                            <select id="transferDepartment" required>
+                                <option value="">Select department</option>
+                                <option value="HR">HR</option>
+                                <option value="Finance">Finance</option>
+                                <option value="IT">IT</option>
+                                <option value="Operations">Operations</option>
+                            </select>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="transferReason">Reason</label>
+                            <textarea id="transferReason" rows="4" placeholder="Enter reason for transfer" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="add-btn">Submit Request</button>
+                        <button type="reset" class="secondary-btn">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel section-panel">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">Transfer Request List</p>
+                        <h2>Submitted Transfer Requests</h2>
+                        <p>Review the status of your transfer requests.</p>
+                    </div>
+                </div>
+                <div class="table-container asset-table-container">
+                    <table class="asset-table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Requested Department</th>
+                                <th>Request Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transferRequestBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="js/employeeTransfer.js"></script>
+</body>
+</html>
