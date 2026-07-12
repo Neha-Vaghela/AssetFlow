@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" aria-label="Open sidebar">☰</button>
+                <div class="brand">AssetFlow</div>
+            </div>
+
+            <div class="topbar-center">
+                <label class="search-box">
+                    <input type="search" placeholder="Search assets, departments..." />
+                </label>
+            </div>
+
+            <div class="topbar-right">
+                <button class="icon-btn">🔔</button>
+                <button class="profile-btn">👤 Admin</button>
+            </div>
+        </header>
+
+        <div class="layout-grid">
+            <aside class="sidebar">
+                <nav>
+                    <a href="#dashboard" class="active">Dashboard</a>
+                    <a href="#departments">Departments</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#employees">Employees</a>
+                    <a href="#audit">Audit Cycle</a>
+                    <a href="#reports">Reports</a>
+                    <a href="#activity">Activity</a>
+                    <a href="#logout">Logout</a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <section class="panel welcome-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Administrator</p>
+                            <h1>Asset Management Overview</h1>
+                        </div>
+                    </div>
+                    <p class="panel-copy">Welcome back. Manage departments, assets, reports, and approvals from one place.</p>
+                </section>
+
+                <section class="summary-grid">
+                    <div class="summary-card">
+                        <span>Total Assets</span>
+                        <strong>1,280</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Available Assets</span>
+                        <strong>420</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Allocated Assets</span>
+                        <strong>630</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Maintenance Today</span>
+                        <strong>18</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Active Bookings</span>
+                        <strong>74</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Pending Transfers</span>
+                        <strong>12</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Upcoming Returns</span>
+                        <strong>27</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Overdue Returns</span>
+                        <strong>5</strong>
+                    </div>
+                </section>
+
+                <section class="panel section-panel">
+                    <div class="section-title">
+                        <h2>Quick Actions</h2>
+                        <p>Manage the most important tasks quickly and easily.</p>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <h3>Add Department</h3>
+                            <p>Create or update departments across the organization.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Add Category</h3>
+                            <p>Organize assets with new categories and types.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Add Employee</h3>
+                            <p>Onboard new employees and assign them asset roles.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel section-panel">
+                    <div class="section-title">
+                        <h2>Recent Activities</h2>
+                    </div>
+                    <ul class="action-list">
+                        <li>Added IT Department</li>
+                        <li>Promoted Rahul to Dept. Head</li>
+                        <li>Created Audit Cycle</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

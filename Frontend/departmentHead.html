@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Head Dashboard</title>
+    <link rel="stylesheet" href="css/departmentHead.css">
+</head>
+<body>
+
+<div class="page-shell">
+
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+            <button class="menu-toggle">☰</button>
+            <h2 class="brand">AssetFlow</h2>
+        </div>
+
+        <div class="topbar-center">
+            <input type="search"
+                   placeholder="Search assets, employees, requests...">
+        </div>
+
+        <div class="topbar-right">
+            <button class="icon-btn">🔔</button>
+            <button class="profile-btn">👤 Department Head</button>
+        </div>
+
+    </header>
+
+    <div class="layout-grid">
+
+
+        <aside class="sidebar">
+
+            <nav>
+
+                <a href="#" class="active">🏠 Dashboard</a>
+
+                <a href="#">Department Assets</a>
+
+                <a href="#">Employee Requests</a>
+
+                <a href="#">Employees</a>
+
+                <a href="#">Resource Booking</a>
+
+                <a href="#">Notifications</a>
+
+                <a href="#">Logout</a>
+
+            </nav>
+
+        </aside>
+
+
+        <main class="main-content">
+
+
+            <section class="panel welcome-panel">
+
+                <div class="welcome-left">
+
+                    <p class="eyebrow">
+                        Department Head Dashboard
+                    </p>
+
+                    <h1>
+                        Welcome Back, Priya Sharma 👋
+                    </h1>
+
+                    <p>
+                        Manage your department assets, employee requests,
+                        resource bookings and approvals from one place.
+                    </p>
+
+                </div>
+
+                <div class="welcome-right">
+
+                    <span class="status-chip">
+                        Department : IT Operations
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- KPI Cards -->
+
+            <section class="summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="card-icon">🖥</div>
+
+                    <h3>245</h3>
+
+                    <p>Total Assets</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon">📄</div>
+
+                    <h3>18</h3>
+
+                    <p>Pending Requests</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon">📅</div>
+
+                    <h3>9</h3>
+
+                    <p>Today's Bookings</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon">👥</div>
+
+                    <h3>36</h3>
+
+                    <p>Department Employees</p>
+
+                </div>
+
+            </section>
+
+            <!-- Quick Actions -->
+
+            <section class="panel">
+
+                <div class="section-title">
+
+                    <h2>Quick Actions</h2>
+
+                    <p>
+                        Frequently used actions for department management.
+                    </p>
+
+                </div>
+
+                <div class="feature-list">
+
+                    <div class="feature-card">
+
+                        <h3>Department Assets</h3>
+
+                        <p>
+                            View department assets, asset details
+                            and request transfers.
+                        </p>
+
+                        <button>
+                            Open →
+                        </button>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <h3>Employee Requests</h3>
+
+                        <p>
+                            Review allocation and transfer
+                            requests submitted by employees.
+                        </p>
+
+                        <button>
+                            Review →
+                        </button>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <h3>Resource Booking</h3>
+
+                        <p>
+                            Book meeting rooms,
+                            projectors and shared resources.
+                        </p>
+
+                        <button>
+                            Manage →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Pending Approval -->
+
+            <section class="panel">
+
+                <div class="section-title">
+
+                    <h2>Pending Approvals</h2>
+
+                </div>
+
+                <ul class="action-list">
+
+                    <li>
+                        💻 Laptop Allocation Request
+                        <span>5 Pending</span>
+                    </li>
+
+                    <li>
+                        🔄 Asset Transfer Request
+                        <span>2 Pending</span>
+                    </li>
+
+                    <li>
+                        🛠 Maintenance Approval
+                        <span>1 Pending</span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- Recent Activities -->
+
+            <section class="panel">
+
+                <div class="section-title">
+
+                    <h2>Recent Activities</h2>
+
+                </div>
+
+                <ul class="activity-list">
+
+                    <li>
+
+                        <strong>09:15 AM</strong>
+
+                        Approved Laptop Allocation Request
+
+                    </li>
+
+                    <li>
+
+                        <strong>10:40 AM</strong>
+
+                        New Asset Transfer Request Received
+
+                    </li>
+
+                    <li>
+
+                        <strong>11:30 AM</strong>
+
+                        Projector booked for Meeting Room
+
+                    </li>
+
+                    <li>
+
+                        <strong>01:00 PM</strong>
+
+                        Maintenance request completed
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- Today's Tasks -->
+
+            <section class="panel">
+
+                <div class="section-title">
+
+                    <h2>Today's Tasks</h2>
+
+                </div>
+
+                <ul class="task-list">
+
+                    <li>
+                        ✅ Review Employee Requests
+                    </li>
+
+                    <li>
+                        ✅ Check Today's Bookings
+                    </li>
+
+                    <li>
+                        ✅ Verify Asset Transfers
+                    </li>
+
+                    <li>
+                        ✅ Monitor Overdue Assets
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>
