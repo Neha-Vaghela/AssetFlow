@@ -1,86 +1,31 @@
+# AssetFlow
 
-<body>
+## Enterprise Asset & Resource Management System
 
-    <h1 align="center">AssetFlow</h1>
+AssetFlow is a MERN-based Enterprise Asset & Resource Management System.
 
-    <h2 align="center">Enterprise Asset &amp; Resource Management System</h2>
+## Features
 
-    <p>
-        AssetFlow is a MERN-based Enterprise Asset &amp; Resource Management System
-        designed to help organizations manage, track, allocate, and maintain
-        physical assets through a centralized platform. It replaces manual asset
-        tracking with a secure digital system, improving efficiency,
-        transparency, and accountability.
-    </p>
+### Admin Module
+- Dashboard
+- Department Management
+- Asset Category Management
+- Employee Directory
 
-    <h2>Features</h2>
+### Asset Manager Module
+- Asset Registration
+- Asset Allocation
+- Asset Transfer
+- Maintenance Tracking
 
-    <h3>Admin Module</h3>
-    <ul>
-        <li>Dashboard</li>
-        <li>Department Management</li>
-        <li>Asset Category Management</li>
-        <li>Employee Directory</li>
-        <li>Audit Management</li>
-        <li>Reports &amp; Analytics</li>
-        <li>Activity Logs</li>
-    </ul>
+### Employee Module
+- View Assigned Assets
+- Request Assets
+- Return Assets
 
-    <h3>Asset Manager Module</h3>
-    <ul>
-        <li>Asset Registration</li>
-        <li>Asset Allocation</li>
-        <li>Asset Transfer</li>
-        <li>Maintenance Tracking</li>
-        <li>Booking Management</li>
-    </ul>
+## Technology Stack
 
-    <h3>Employee Module</h3>
-    <ul>
-        <li>View Assigned Assets</li>
-        <li>Request Assets</li>
-        <li>Return Assets</li>
-        <li>View Asset History</li>
-    </ul>
-
-    <h2>Technology Stack</h2>
-
-    <ul>
-        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Chart.js</li>
-        <li><strong>Backend:</strong> Node.js, Express.js</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Authentication:</strong> JWT, RBAC</li>
-    </ul>
-
-    <h2>Project Modules</h2>
-
-    <ol>
-        <li>Authentication</li>
-        <li>Dashboard</li>
-        <li>Department Management</li>
-        <li>Asset Category Management</li>
-        <li>Employee Management</li>
-        <li>Asset Management</li>
-        <li>Maintenance Management</li>
-        <li>Reports</li>
-    </ol>
-
-    <h2>Future Enhancements</h2>
-
-    <ul>
-        <li>QR Code / Barcode Asset Tracking</li>
-        <li>Email Notifications</li>
-        <li>PDF &amp; Excel Reports</li>
-        <li>Mobile Application</li>
-        <li>AI-based Asset Insights</li>
-    </ul>
-
-    <h2>Team Members</h2>
-
-    <ul>
-        <li>Neha Vaghela</li>
-        <li>Shivani</li>
-    </ul>
-
-</body>
-</html>
+- Frontend: HTML, CSS, JavaScript, Chart.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JWT
