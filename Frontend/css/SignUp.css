@@ -1,0 +1,104 @@
+body {
+    /* The exact same balanced gradient background you liked */
+    background: linear-gradient(135deg, #A5B4FC, #C084FC, #93C5FD);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 2rem;
+}
+
+.cards {
+    /* Blends seamlessly with the background using frosted glass */
+    background: rgba(255, 255, 255, 0.45); 
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    color: #1E293B;      
+    border-radius: 24px; 
+    padding: 3rem;  
+    width: 100%;
+    max-width: 480px; /* Perfectly sized for a sleek form */
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+}
+
+/* Header style inside the card */
+.cards h2 {
+    margin: 0 0 2rem 0;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+/* Form layout wrappers */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Inputs, Textareas, and Select Dropdowns */
+.form-group input,
+.form-group select {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    color: #1E293B;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* Focus states for fields */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6366F1;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Sign Up Button styling */
+/* Sign Up Button styling */
+.signup-btn {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 12px;
+    background: #7C3AED; /* Vibrant purple that complements the gradient */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.signup-btn:hover {
+    background: #6D28D9; /* A slightly darker purple for the hover state */
+}
+
+.signup-btn:active {
+    transform: scale(0.98); /* Subtle click animation */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+}

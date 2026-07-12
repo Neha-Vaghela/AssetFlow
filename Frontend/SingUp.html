@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="css/SignUp.css">
+</style>
+</head>
+<body>
+    <div class="cards">
+    <h2>Create Account</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="admin">Admin</option>
+                <option value="asset-manager">Asset Manager</option>
+                <option value="department-head">Department Head</option>
+                <option value="employee">Employee</option>
+            </select>
+        </div>
+
+        <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+</div>
+</body>
+</html>
