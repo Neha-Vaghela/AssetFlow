@@ -1,0 +1,325 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #A5B4FC, #C084FC, #93C5FD);
+    --sidebar-bg: #1E1B4B;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --purple-primary: #7C3AED;
+    --purple-hover: #6D28D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    display: flex;
+}
+
+/* SIDEBAR LAYOUT */
+.sidebar {
+    width: 260px;
+    background: var(--sidebar-bg);
+    min-height: 100vh;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.sidebar-brand h2 {
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #A5B4FC, #E9D5FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu-item, .dropdown-btn {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    color: #CBD5E1;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.menu-item:hover, .dropdown-btn:hover, .menu-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.menu-item.active {
+    background: var(--purple-primary);
+}
+
+/* Dropdown Sub-menus */
+.dropdown-container {
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding-left: 1.5rem;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+}
+
+.dropdown-container a {
+    display: block;
+    padding: 0.65rem 1rem;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-container a:hover {
+    color: #FFFFFF;
+}
+
+/* MAIN PANEL CONTENT WRAPPER */
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.nav-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: var(--purple-primary);
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* DASHBOARD SPACE COMPONENT SLOTS */
+.dashboard-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* KPI SYSTEM CONTAINER */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-icon {
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.kpi-info h3 {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.kpi-value {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 0.25rem;
+}
+
+/* GENERAL CARDS */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+/* ROW-BASED GRID LAYOUTS */
+.dashboard-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-3-col {
+    grid-template-columns: 1.2fr 1fr 0.8fr;
+}
+
+/* TABLES STYLING */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+}
+
+th {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+td {
+    font-weight: 500;
+}
+
+/* STATUS STICKERS */
+.status {
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.badge-available { background: #DCFCE7; color: #166534; }
+.badge-allocated { background: #DBEAFE; color: #1E40AF; }
+.badge-maintenance { background: #FEE2E2; color: #991B1B; }
+
+/* ACTION SYSTEMS */
+.action-btns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btns button {
+    padding: 0.4rem 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-approve { background: #22C55E; color: #FFFFFF; }
+.btn-reject { background: #EF4444; color: #FFFFFF; }
+
+/* CHARTS SIZE SETTINGS */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+/* QUICK ACTION GRID ITEM ELEMENTS */
+.actions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.action-btn-item {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--purple-primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.action-btn-item:hover {
+    background: var(--purple-hover);
+}
+
+/* RESPONSIVE MEDIA SNAPS */
+@media (max-width: 1200px) {
+    .dashboard-row, .grid-3-col {
+        grid-template-columns: 1fr;
+    }
+}

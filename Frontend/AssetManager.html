@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Manager Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/AssetManager.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>AssetFlow</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active">Dashboard</a>
+            
+            <div class="menu-dropdown">
+                <button class="dropdown-btn">Assets <span>▼</span></button>
+                <div class="dropdown-container">
+                    <a href="#">All Assets</a>
+                    <a href="#">Add Asset</a>
+                </div>
+            </div>
+
+            <div class="menu-dropdown">
+                <button class="dropdown-btn">Allocation <span>▼</span></button>
+                <div class="dropdown-container">
+                    <a href="#">Assign Asset</a>
+                    <a href="#">Return Asset</a>
+                </div>
+            </div>
+
+            <a href="#" class="menu-item">Maintenance</a>
+            <a href="#" class="menu-item">Reports</a>
+            <a href="#" class="menu-item">Profile</a>
+             <a href="#" class="menu-item">Logout</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        
+        <header class="navbar">
+            <div class="nav-title">Asset Manager Dashboard</div>
+            <div class="nav-profile">
+                <span>Welcome, Manager</span>
+                <div class="avatar">AM</div>
+            </div>
+        </header>
+
+        <main class="dashboard-container">
+            
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">📦</div>
+                    <div class="kpi-info">
+                        <h3>Total Assets</h3>
+                        <p class="kpi-value">120</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">👤</div>
+                    <div class="kpi-info">
+                        <h3>Allocated Assets</h3>
+                        <p class="kpi-value">45</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">✅</div>
+                    <div class="kpi-info">
+                        <h3>Available Assets</h3>
+                        <p class="kpi-value">65</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🔧</div>
+                    <div class="kpi-info">
+                        <h3>In Maintenance</h3>
+                        <p class="kpi-value">10</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-row">
+                <div class="card table-card">
+                    <h3>Recent Assets</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Asset Name</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dell Latitude 5520</td>
+                                    <td>Laptop</td>
+                                    <td><span class="status badge-available">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HP Monitor Pro</td>
+                                    <td>Monitor</td>
+                                    <td><span class="status badge-allocated">Allocated</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Canon Printer G3010</td>
+                                    <td>Printer</td>
+                                    <td><span class="status badge-maintenance">Maintenance</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <h3>Assets Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row grid-3-col">
+                <div class="card table-card">
+                    <h3>Pending Requests</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Asset</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Shivani</td>
+                                    <td>Laptop</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <button class="btn-approve">Approve</button>
+                                            <button class="btn-reject">Reject</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Neha</td>
+                                    <td>Monitor</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <button class="btn-approve">Approve</button>
+                                            <button class="btn-reject">Reject</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Miral</td>
+                                    <td>Keyboard</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <button class="btn-approve">Approve</button>
+                                            <button class="btn-reject">Reject</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <h3>Assets by Category</h3>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card quick-actions-card">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <a href="assetManagement.html" class="action-btn-item">+ Add Asset</a>
+                        <a href="allocateAsset.html" class="action-btn-item">+ Allocate Asset</a>
+                        <button class="action-btn-item">+ Create Category</button>
+                        <button class="action-btn-item">View Reports</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/AssetManager.js"></script>
+</body>
+</html>
