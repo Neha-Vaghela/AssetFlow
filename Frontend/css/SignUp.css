@@ -90,8 +90,25 @@ body {
     background: #6D28D9; /* A slightly darker purple for the hover state */
 }
 
-.signup-btn:active {
+signup-btn:active {
     transform: scale(0.98); /* Subtle click animation */
+}
+
+.form-footer {
+    margin-top: 1rem;
+    font-size: 14px;
+    text-align: center;
+    color: #334155;
+}
+
+.form-footer a {
+    color: #6366F1;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
 }
 
 *{

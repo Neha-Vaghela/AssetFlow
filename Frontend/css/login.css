@@ -85,6 +85,23 @@ body {
     transform: scale(0.98);
 }
 
+.form-footer {
+    margin-top: 1rem;
+    font-size: 14px;
+    text-align: center;
+    color: #334155;
+}
+
+.form-footer a {
+    color: #6366F1;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
 * {
     margin: 0;
     padding: 0;
