@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Management</title>
+    <link rel="stylesheet" href="css/maintenance.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>Maintenance Management</h1>
+                <p>Report issues, attach photos, and approve maintenance requests.</p>
+            </div>
+            <a href="AssetManager.html" class="nav-btn">Back to Dashboard</a>
+        </div>
+
+        <div class="grid-two-col">
+            <section class="panel form-box">
+                <div class="form-header">
+                    <div>
+                        <h2>Raise Maintenance Form</h2>
+                        <p>When something breaks, submit the details below.</p>
+                    </div>
+                </div>
+
+                <form id="maintenanceForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="assetId">Asset</label>
+                            <select id="assetId" required>
+                                <option value="">Select asset</option>
+                                <option value="AF-0001">AF-0001</option>
+                                <option value="AF-0003">AF-0003</option>
+                                <option value="AF-0005">AF-0005</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="priority">Priority</label>
+                            <select id="priority" required>
+                                <option value="">Select priority</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label for="issueDesc">Issue Description</label>
+                            <textarea id="issueDesc" rows="4" placeholder="Describe the issue" required></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="photoUpload">Photo</label>
+                            <input type="file" id="photoUpload" accept="image/*">
+                        </div>
+
+                        <div class="input-group preview-group">
+                            <label>Preview</label>
+                            <div id="photoPreview" class="photo-preview">No photo</div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="add-btn">Submit Request</button>
+                        <button type="reset" class="secondary-btn">Reset</button>
+                    </div>
+                </form>
+
+                
+            </section>
+
+            <section class="panel table-panel">
+                <div class="form-header">
+                    <div>
+                        <h2>Maintenance Approval Table</h2>
+                        <p>Asset | Issue | Status — manage approvals below.</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="maintenanceTable">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Issue</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <div id="rowActions" class="row-actions">
+                        <div class="selected-info">Selected: <span id="selectedInfo">None</span></div>
+                        <div class="action-controls">
+                            <button id="btnApproveSelected" class="action-btn approve" disabled>Approve</button>
+                            <button id="btnRejectSelected" class="action-btn reject" disabled>Reject</button>
+                            <button id="btnResolveSelected" class="action-btn resolve" disabled>Mark Resolved</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/maintenance.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+table{width:100%;border-collapse:collapse}
+thead th{padding:0.85rem;text-align:left;color:#475569;border-bottom:1px solid rgba(148,163,184,0.2)}
+tbody td{padding:0.75rem;border-bottom:1px solid rgba(148,163,184,0.08)}
+.action-btn{padding:0.4rem 0.6rem;border-radius:8px;border:none;cursor:pointer;margin-right:0.35rem}
+.approve{background:#10B981;color:#fff}
+.reject{background:#EF4444;color:#fff}
+.resolve{background:#6366F1;color:#fff}
+@media(max-width:900px){.grid-two-col{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
+:root {
+	--bg-gradient: linear-gradient(135deg, #FDE68A, #FBCFE8);
+	--card-bg: rgba(255, 255, 255, 0.72);
+	--text-main: #0F172A;
+	--muted: #475569;
+	--accent: #7C3AED;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #93C5FD, #A78BFA, #F9A8D4);
+    color: #0F172A;
+}
+
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem 3rem;
+}
+
+.page-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	padding: 1.25rem;
+	border-radius: 20px;
+	background: var(--card-bg);
+	backdrop-filter: blur(14px);
+	border: 1px solid rgba(255,255,255,0.6);
+}
+
+.page-header h1 { margin: 0; font-size: 1.6rem; }
+
+.nav-btn, .add-btn, .secondary-btn {
+	border: none;
+	padding: 0.75rem 1rem;
+	border-radius: 12px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.nav-btn { background: #FFFFFF; color: #334155; text-decoration: none; border: 1px solid rgba(148,163,184,0.35); }
+
+.add-btn { background: var(--accent); color: #fff; }
+
+.secondary-btn { background: rgba(79,70,229,0.06); color: #4338CA; border: 1px solid rgba(79,70,229,0.06); }
+
+.grid-two-col { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 1.25rem; }
+
+.panel { background: var(--card-bg); backdrop-filter: blur(14px); border-radius: 18px; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.6); }
+
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+.input-group { display:flex; flex-direction:column; }
+.input-group.full-width { grid-column: 1 / -1; }
+.input-group label { font-weight:700; margin-bottom:0.45rem; color: var(--text-main); }
+.input-group input, .input-group select, .input-group textarea, .input-group input[type=file] {
+	width:100%; padding:0.85rem; border-radius:10px; border:1px solid rgba(148,163,184,0.35); background:#fff; color:var(--text-main);
+}
+.photo-preview { height:96px; width:100%; display:flex; align-items:center; justify-content:center; border-radius:10px; border:1px dashed rgba(148,163,184,0.38); background:#fff; color:var(--muted); }
+
+.form-actions { display:flex; gap:0.75rem; margin-top:1rem; }
+
+.table-container { overflow-x:auto; margin-top:0.5rem; border-radius:14px; background: rgba(255,255,255,0.72); }
+
+table { width:100%; border-collapse:collapse; }
+thead th { padding:0.85rem 1rem; text-align:left; color:var(--muted); font-size:0.95rem; letter-spacing:0.02em; text-transform:uppercase; border-bottom:1px solid rgba(148,163,184,0.2); }
+tbody td { padding:0.85rem 1rem; color: var(--text-main); border-bottom:1px solid rgba(148,163,184,0.12); }
+
+.action-btn { padding:0.45rem 0.65rem; border-radius:8px; border:none; cursor:pointer; margin-right:0.35rem; font-weight:700; }
+.approve { background:#10B981; color:#fff }
+.reject { background:#EF4444; color:#fff }
+.resolve { background:#6366F1; color:#fff }
+
+@media (max-width: 900px) {
+	.grid-two-col { grid-template-columns: 1fr; }
+	.form-grid { grid-template-columns: 1fr; }
+}
+
+/* Selected row highlight and shared action bar */
+.selected-row { background: linear-gradient(90deg, rgba(124,58,237,0.06), rgba(99,102,241,0.04)); }
+.row-actions { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1rem; padding:0.85rem; border-radius:12px; background: rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.6); }
+.row-actions .selected-info { font-weight:700; color:var(--text-main); }
+.row-actions .action-controls { display:flex; gap:0.6rem; }
