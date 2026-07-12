@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/AdminDashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>AssetSync <span class="badge-admin">Admin</span></h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active">📊 Dashboard</a>
+            <a href="#" class="menu-item">🏢 Departments</a>
+            <a href="Categories.html" class="menu-item">📦 Asset Categories</a>
+            <a href="#" class="menu-item">👥 Employees</a>
+            <a href="#" class="menu-item">📝 Audit Cycle</a>
+            <a href="#" class="menu-item">📈 Reports</a>
+            <a href="#" class="menu-item">📋 Activity Logs</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        
+        <header class="navbar">
+            <div class="nav-title">Admin Dashboard Platform</div>
+            <div class="nav-right">
+                <div class="notifications">
+                    <span class="bell-icon">🔔</span>
+                    <span class="noti-badge">3</span>
+                </div>
+                <div class="nav-profile">
+                    <span>Admin Name</span>
+                    <div class="avatar">AD</div>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-container">
+            
+            <section class="kpi-grid-8">
+                <div class="kpi-card">
+                    <span class="kpi-emoji">📦</span>
+                    <div><h3>Total Assets</h3><p>120</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">✅</span>
+                    <div><h3>Available</h3><p>80</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">👤</span>
+                    <div><h3>Allocated</h3><p>30</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">🔧</span>
+                    <div><h3>Maintenance</h3><p>10</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">📅</span>
+                    <div><h3>Active Bookings</h3><p>15</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">🔄</span>
+                    <div><h3>Pending Transfers</h3><p>5</p></div>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-emoji">⏱️</span>
+                    <div><h3>Upcoming Returns</h3><p>8</p></div>
+                </div>
+                <div class="kpi-card alert-card">
+                    <span class="kpi-emoji">🚨</span>
+                    <div><h3>Overdue Returns</h3><p>3</p></div>
+                </div>
+            </section>
+
+            <section class="card quick-actions-row">
+                <h3>Quick Management Setup</h3>
+                <div class="actions-flex">
+                    <button class="action-btn">+ Add Department</button>
+                    <button class="action-btn">+ Add Category</button>
+                    <button class="action-btn">+ Add Employee</button>
+                </div>
+            </section>
+
+            <section class="dashboard-row">
+                <div class="card chart-card">
+                    <h3>Asset Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="adminPieChart"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Department-wise Assets</h3>
+                    <div class="chart-container">
+                        <canvas id="adminBarChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-row">
+                <div class="card log-card">
+                    <h3>Recent System Activities</h3>
+                    <ul class="activity-timeline">
+                        <li><span class="bullet purple"></span>Admin created IT Department</li>
+                        <li><span class="bullet purple"></span>Admin added Laptop Category</li>
+                        <li><span class="bullet blue"></span>Admin promoted Shivani</li>
+                        <li><span class="bullet green"></span>Asset Manager completed Audit</li>
+                    </ul>
+                </div>
+
+                <div class="card table-card">
+                    <h3>Pending Items</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Audit Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Q3 Audit</td>
+                                    <td><span class="status badge-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Laptop Audit</td>
+                                    <td><span class="status badge-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Printer Audit</td>
+                                    <td><span class="status badge-progress">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/AdminDashboard.js"></script>
+</body>
+</html>
