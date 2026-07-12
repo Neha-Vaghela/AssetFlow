@@ -12,6 +12,7 @@ const employeeRoutes = require("./routes/employeeRoutes");
 const assetRoutes = require("./routes/assetRoutes");
 const allocationRoutes = require("./routes/allocationRoutes");
 const maintenanceRoutes = require("./routes/maintenanceRoutes");
+const assetDashboardRoutes = require("./routes/assetDashboardRoutes");
 
 
 const app = express();
@@ -32,5 +33,7 @@ app.use("/api/maintenance", maintenanceRoutes);
 //asset management
 app.use("/api/assets", assetRoutes);
 app.use("/api/allocations", allocationRoutes);
+app.use("/api/asset-dashboard", assetDashboardRoutes);
+
 
 module.exports = app;
