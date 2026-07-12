@@ -40,7 +40,20 @@ loginForm.addEventListener("submit", async (e) => {
 
             alert("Login Successful!");
 
-            window.location.href = "AssetManager.html";
+            const role = data.user.role;
+
+if (role === "Admin") {
+    window.location.href = "admin.html";
+}
+else if (role === "Asset Manager") {
+    window.location.href = "AssetManager.html";
+}
+else if (role === "Department Head") {
+    window.location.href = "DepartmentHead.html";
+}
+else {
+    window.location.href = "Employee.html";
+}
 
         } else {
 
